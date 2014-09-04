@@ -1,0 +1,14 @@
+Quick test of modal view presentation dismissal for iOS 8
+
+Steps to reproduce:
+* Launch on iOS 7 and iOS 8 simultaneously
+* Click through the 'next' buttons' showing blue, green, yellow, and pink screens with alternating animation styles
+* Click 'close all' to dismiss all modals and return to the base blue screen
+
+Expected results:
+* "only the top-most view is dismissed in an animated fashion; any intermediate view controllers are simply removed from the stack. The top-most view is dismissed using its modal transition style, which may differ from the styles used by other view controllers lower in the stack"
+
+Actual results:
+* on iOS 7.1, iOS 6.1 get as expected
+* on iOS 8 beta 5, the pink and yellow layers vanish, then the green layer animates away using its animation style
+
