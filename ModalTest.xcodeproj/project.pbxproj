@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		D408F63819B9052F00F2B07E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D408F63719B9052F00F2B07E /* main.m */; };
 		D408F63B19B9052F00F2B07E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D408F63A19B9052F00F2B07E /* AppDelegate.m */; };
-		D408F63E19B9052F00F2B07E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D408F63D19B9052F00F2B07E /* ViewController.m */; };
 		D408F64119B9052F00F2B07E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D408F63F19B9052F00F2B07E /* Main.storyboard */; };
 		D408F64319B9052F00F2B07E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D408F64219B9052F00F2B07E /* Images.xcassets */; };
 		D408F64F19B9052F00F2B07E /* ModalTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D408F64E19B9052F00F2B07E /* ModalTestTests.m */; };
+		D408F65A19B907B400F2B07E /* ModalTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D408F65919B907B400F2B07E /* ModalTestViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,13 +31,13 @@
 		D408F63719B9052F00F2B07E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D408F63919B9052F00F2B07E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D408F63A19B9052F00F2B07E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		D408F63C19B9052F00F2B07E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D408F63D19B9052F00F2B07E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		D408F64019B9052F00F2B07E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D408F64219B9052F00F2B07E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D408F64819B9052F00F2B07E /* ModalTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ModalTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D408F64D19B9052F00F2B07E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D408F64E19B9052F00F2B07E /* ModalTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModalTestTests.m; sourceTree = "<group>"; };
+		D408F65819B907B400F2B07E /* ModalTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalTestViewController.h; sourceTree = "<group>"; };
+		D408F65919B907B400F2B07E /* ModalTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalTestViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,9 +81,9 @@
 			children = (
 				D408F63919B9052F00F2B07E /* AppDelegate.h */,
 				D408F63A19B9052F00F2B07E /* AppDelegate.m */,
-				D408F63C19B9052F00F2B07E /* ViewController.h */,
-				D408F63D19B9052F00F2B07E /* ViewController.m */,
 				D408F63F19B9052F00F2B07E /* Main.storyboard */,
+				D408F65819B907B400F2B07E /* ModalTestViewController.h */,
+				D408F65919B907B400F2B07E /* ModalTestViewController.m */,
 				D408F64219B9052F00F2B07E /* Images.xcassets */,
 				D408F63519B9052F00F2B07E /* Supporting Files */,
 			);
@@ -215,7 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D408F63E19B9052F00F2B07E /* ViewController.m in Sources */,
+				D408F65A19B907B400F2B07E /* ModalTestViewController.m in Sources */,
 				D408F63B19B9052F00F2B07E /* AppDelegate.m in Sources */,
 				D408F63819B9052F00F2B07E /* main.m in Sources */,
 			);
@@ -335,6 +335,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = ModalTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -346,6 +347,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = ModalTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -404,6 +406,7 @@
 				D408F65419B9052F00F2B07E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D408F65519B9052F00F2B07E /* Build configuration list for PBXNativeTarget "ModalTestTests" */ = {
 			isa = XCConfigurationList;
@@ -412,6 +415,7 @@
 				D408F65719B9052F00F2B07E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

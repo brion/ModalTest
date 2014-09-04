@@ -1,25 +1,174 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6162" systemVersion="14A238h" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6206.9" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6160"/>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7026.1"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Modal Test View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ModalTestViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UBB-ln-LaJ">
+                                <rect key="frame" x="277" y="285" width="32" height="30"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Zrb-6g-lIF" kind="presentation" id="jP6-Lc-5jp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.31815919557040762" green="0.27934790279309163" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="UBB-ln-LaJ" secondAttribute="centerX" id="JMu-ux-rfF"/>
+                            <constraint firstAttribute="centerY" secondItem="UBB-ln-LaJ" secondAttribute="centerY" id="eHc-ax-sEn"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="nextButton" destination="UBB-ln-LaJ" id="C0e-vI-0DB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="572" y="493"/>
+        </scene>
+        <!--Modal Test View Controller-->
+        <scene sceneID="AtI-Di-ySh">
+            <objects>
+                <viewController id="Zrb-6g-lIF" customClass="ModalTestViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="h7b-Gd-xYH"/>
+                        <viewControllerLayoutGuide type="bottom" id="nom-zk-1Vx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TRl-B9-iaS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CoE-8j-W6h">
+                                <rect key="frame" x="284" y="285" width="32" height="30"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="U4p-DW-Ol6" kind="presentation" id="2TP-KA-480"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cYG-9C-fSe">
+                                <rect key="frame" x="280" y="323" width="40" height="30"/>
+                                <state key="normal" title="Close">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onCloseButton:" destination="Zrb-6g-lIF" eventType="touchUpInside" id="KOP-Db-zqw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.3045550251268957" green="1" blue="0.69542754515157634" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="CoE-8j-W6h" secondAttribute="centerX" id="1oH-mh-rEe"/>
+                            <constraint firstAttribute="centerY" secondItem="CoE-8j-W6h" secondAttribute="centerY" id="7Ge-9R-jSd"/>
+                            <constraint firstItem="CoE-8j-W6h" firstAttribute="centerX" secondItem="cYG-9C-fSe" secondAttribute="centerX" id="Fal-ki-gbl"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="closeButton" destination="cYG-9C-fSe" id="Kw8-TL-hXT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cC6-Oe-2il" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1236" y="493"/>
+        </scene>
+        <!--Modal Test View Controller-->
+        <scene sceneID="EW0-39-lEy">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" id="U4p-DW-Ol6" customClass="ModalTestViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Rcz-Rx-Pev"/>
+                        <viewControllerLayoutGuide type="bottom" id="dDm-ah-Tx1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9Ps-je-jSb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZFg-Ja-slU">
+                                <rect key="frame" x="299" y="285" width="32" height="30"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="LZ7-NQ-buc" kind="presentation" id="rRB-r3-GD8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l7g-A9-EhT">
+                                <rect key="frame" x="285" y="323" width="60" height="30"/>
+                                <state key="normal" title="Close all">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onCloseButton:" destination="U4p-DW-Ol6" eventType="touchUpInside" id="SqX-IP-xaK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.89118756598818638" green="1" blue="0.41760362688702735" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="ZFg-Ja-slU" firstAttribute="centerX" secondItem="l7g-A9-EhT" secondAttribute="centerX" id="PvD-9T-wUI"/>
+                            <constraint firstAttribute="centerX" secondItem="ZFg-Ja-slU" secondAttribute="centerX" id="Wth-rO-BbA"/>
+                            <constraint firstAttribute="centerY" secondItem="ZFg-Ja-slU" secondAttribute="centerY" id="l3Y-vM-8O4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="closeButton" destination="l7g-A9-EhT" id="HR3-1S-CNa"/>
+                        <outlet property="nextButton" destination="ZFg-Ja-slU" id="ifs-6H-EZ6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vrb-gG-FVx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="807" y="1167"/>
+        </scene>
+        <!--Modal Test View Controller-->
+        <scene sceneID="mA0-bW-NTT">
+            <objects>
+                <viewController modalTransitionStyle="flipHorizontal" id="LZ7-NQ-buc" customClass="ModalTestViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vr6-W0-j8M"/>
+                        <viewControllerLayoutGuide type="bottom" id="weS-fc-1id"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0UL-Ok-4d0">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q8F-o4-c9S">
+                                <rect key="frame" x="271" y="285" width="59" height="30"/>
+                                <state key="normal" title="Close all">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onCloseButton:" destination="LZ7-NQ-buc" eventType="touchUpInside" id="rip-b2-uy4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.48863027364330591" blue="0.6645056128182365" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="q8F-o4-c9S" secondAttribute="centerX" id="Q36-rU-12Z"/>
+                            <constraint firstAttribute="centerY" secondItem="q8F-o4-c9S" secondAttribute="centerY" id="rUL-Ac-atT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="closeButton" destination="q8F-o4-c9S" id="rP8-Em-oU6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M3j-o1-ikz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1535" y="1167"/>
         </scene>
     </scenes>
 </document>
